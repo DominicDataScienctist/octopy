@@ -73,10 +73,10 @@ class LogisticModel:
 
         """
         home_feature_names = [
-            x.replace("x0", "home") for x in self.team_encoding_.get_feature_names()
+            x.replace("x0", "home") for x in self.team_encoding_.get_feature_names_out()
         ]
         away_feature_names = [
-            x.replace("x0", "away") for x in self.team_encoding_.get_feature_names()
+            x.replace("x0", "away") for x in self.team_encoding_.get_feature_names_out()
         ]
         coeffs = pd.DataFrame(
             self.model_.coef_,
